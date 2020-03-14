@@ -1,1 +1,4 @@
-/AsteroidsLibGDX/target/
+/*/target/
+/*/*/target/
+/*/.idea
+*.iml
