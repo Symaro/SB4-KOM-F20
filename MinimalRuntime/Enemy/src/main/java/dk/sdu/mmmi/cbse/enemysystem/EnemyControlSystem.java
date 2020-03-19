@@ -15,11 +15,15 @@ import dk.sdu.mmmi.cbse.common.data.entityparts.MovingPart;
 import dk.sdu.mmmi.cbse.common.data.entityparts.PositionPart;
 import dk.sdu.mmmi.cbse.common.services.IEntityProcessingService;
 import java.util.Random;
+import org.openide.util.lookup.ServiceProvider;
+import org.openide.util.lookup.ServiceProviders;
 
 /**
  *
  * @author John
  */
+@ServiceProviders(value = {
+    @ServiceProvider(service = IEntityProcessingService.class),})
 public class EnemyControlSystem implements IEntityProcessingService{
     
     Random rnd = new Random(10);

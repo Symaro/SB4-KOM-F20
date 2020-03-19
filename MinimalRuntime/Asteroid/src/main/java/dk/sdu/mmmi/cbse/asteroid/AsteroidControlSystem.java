@@ -14,13 +14,16 @@ import dk.sdu.mmmi.cbse.common.data.entityparts.SplitterPart;
 import dk.sdu.mmmi.cbse.common.services.IEntityProcessingService;
 import dk.sdu.mmmi.cbse.common.services.IPostEntityProcessingService;
 import java.util.Random;
-
+import org.openide.util.lookup.ServiceProvider;
+import org.openide.util.lookup.ServiceProviders;
 
 /**
  *
  * @author Phillip O
  */
 //@ServiceProvider(service = IEntityProcessingService.class)
+@ServiceProviders(value = {
+    @ServiceProvider(service = IEntityProcessingService.class),})
 public class AsteroidControlSystem implements IEntityProcessingService {
 
     int numPoints = 6;

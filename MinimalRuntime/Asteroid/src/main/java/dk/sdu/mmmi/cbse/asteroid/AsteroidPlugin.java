@@ -10,12 +10,15 @@ import dk.sdu.mmmi.cbse.common.data.entityparts.PositionPart;
 import dk.sdu.mmmi.cbse.common.data.entityparts.SplitterPart;
 import dk.sdu.mmmi.cbse.common.services.IGamePluginService;
 import dk.sdu.mmmi.cbse.common.services.IPostEntityProcessingService;
-//import org.openide.util.lookup.ServiceProvider;
-//import org.openide.util.lookup.ServiceProviders;
+import org.openide.util.lookup.ServiceProvider;
+import org.openide.util.lookup.ServiceProviders;
 //@ServiceProviders(value = {
 // @ServiceProvider(service = IPostEntityProcessingService.class),
 // @ServiceProvider(service = IGamePluginService.class)
 //})
+
+@ServiceProviders(value = {
+    @ServiceProvider(service = IGamePluginService.class),})
 public class AsteroidPlugin
   implements IGamePluginService, IPostEntityProcessingService
 {
