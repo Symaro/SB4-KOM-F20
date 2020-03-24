@@ -1,4 +1,5 @@
 Manifest-Version: 1.0
-OpenIDE-Module-Layer: dk/sdu/mmmi/cbse/silentupdate/layer.xml
-OpenIDE-Module-Localizing-Bundle: dk/sdu/mmmi/cbse/silentupdate/Bundle.properties
+OpenIDE-Module-Install: org/netbeans/modules/autoupdate/silentupdate/UpdateActivator.class
+OpenIDE-Module-Layer: org/netbeans/modules/autoupdate/silentupdate/resources/layer.xml
+OpenIDE-Module-Localizing-Bundle: org/netbeans/modules/autoupdate/silentupdate/resources/Bundle.properties
 
