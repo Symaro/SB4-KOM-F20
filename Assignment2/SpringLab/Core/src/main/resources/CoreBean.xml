@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+    <!-- Player interfaces -->
+    <bean id="playerControlSystemBean" class="dk.sdu.mmmi.cbse.playersystem.PlayerControlSystem"/>
+    <bean id="playerPluginBean" class="dk.sdu.mmmi.cbse.playersystem.PlayerPlugin"/>
+    
+    <!-- Asteroid interfaces -->
+    <bean id="asteroidControlSystemBean" class="dk.sdu.mmmi.cbse.asteroid.AsteroidControlSystem"/>
+    <bean id="asteroidPluginBean" class="dk.sdu.mmmi.cbse.asteroid.AsteroidPlugin"/>
+    <bean id="asteroidSplitterBean" class="dk.sdu.mmmi.cbse.asteroid.AsteroidSplitter"/>
+    
+    <!-- Collision -->
+    <bean id="colliderBean" class="dk.sdu.mmmi.cbse.collision.Collider"/>
+    
+    <bean id="game" class="dk.sdu.mmmi.cbse.main.Game">
+        <property name="entityProcessors">
+            <list>
+                <ref bean="playerControlSystemBean"/>
+                <ref bean="asteroidControlSystemBean"/>
+                <ref bean="asteroidSplitterBean"/>
+            </list>          
+        </property>
+        <property name="gamePlugins">
+            <list>
+                <ref bean="playerPluginBean"/>
+                <ref bean="asteroidPluginBean"/>
+            </list>
+        </property>
+        <property name="postEntityProcessors">
+            <list>
+                <ref bean="asteroidPluginBean"/>
+                <ref bean="colliderBean"/>
+            </list>
+        </property>
+    </bean>
+</beans>

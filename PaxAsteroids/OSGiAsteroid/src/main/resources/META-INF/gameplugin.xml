@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="dk.sdu.mmmi.osgiasteroid">
+    <implementation class="dk.sdu.mmmi.osgiasteroid.AsteroidPlugin"/>
+    <service>
+        <provide interface="dk.sdu.mmmi.cbse.common.services.IGamePluginService"/>
+    </service>
+</scr:component>
