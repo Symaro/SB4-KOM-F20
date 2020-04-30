@@ -45,7 +45,6 @@ public class Game
                 new GameInputProcessor(gameData)
         );
 
-        // Lookup all Game Plugins using ServiceLoader
         for (IGamePluginService iGamePlugin : gamePlugins) {
             iGamePlugin.start(gameData, world);
         }

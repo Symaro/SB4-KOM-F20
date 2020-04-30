@@ -10,7 +10,7 @@ public class Main {
     public static void main(String[] args) {
         
         ApplicationContext gamecontext = new ClassPathXmlApplicationContext("CoreBean.xml");
-        Game game = gamecontext.getBean("game", Game.class );
+        Game game = gamecontext.getBean("game", Game.class);
 
         LwjglApplicationConfiguration cfg
                 = new LwjglApplicationConfiguration();
