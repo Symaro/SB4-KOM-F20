@@ -17,10 +17,6 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-//import org.hamcrest.collection.IsEmptyCollection;
-//import static org.hamcrest.CoreMatchers.not;
-//import static org.hamcrest.MatcherAssert.assertThat;
-
 /**
  *
  * @author John
@@ -67,26 +63,6 @@ public class PlayerPluginTest {
         assert(!world.getEntities(Player.class).isEmpty()); // asserts that the player entity collection is not empty
     }
     
-    
-//    @Test - OG TEST
-//    public void start_AddingPlayer_True() {
-//                
-//        assertThat(world.getEntities(Player.class), IsEmptyCollection.empty()); // Asserts that there are no players
-//        
-//        playerPlugin.start(gameData, world); // Creates and adds a player
-//             
-//        assertNotNull(world.getEntities(Player.class)); // Asserts that worlds entity player collection is not null
-//        assertThat(world.getEntities(Player.class), not(IsEmptyCollection.empty())); // asserts that the player entity collection is not empty
-//    }
-    
-//    @Test
-//    public Entity createPlayerShip_createPlayer_True() {
-//        
-//        //TODO: make test
-//        
-//        return new Entity();
-//    }
-    
     @Test
     public void stop_RemovingPlayer_True() {
         
@@ -99,17 +75,4 @@ public class PlayerPluginTest {
         
         assert(world.getEntities(Player.class).isEmpty()); //Asserts that the added player has been removed
     }
-    
-//        @Test - OG TEST
-//    public void stop_RemovingPlayer_True() {
-//        
-//        playerPlugin.start(gameData, world); // Asserts that worlds entity player collection is not null
-//        
-//        assertNotNull(world.getEntities(Player.class)); // Asserts that worlds entity player collection is not null
-//        assertThat(world.getEntities(Player.class), not(IsEmptyCollection.empty())); // asserts that the player entity collection is not empty
-//        
-//        playerPlugin.stop(gameData, world); // Removes the player 
-//        
-//        assertThat(world.getEntities(Player.class), IsEmptyCollection.empty()); //Asserts that the added player has been removed
-//    }
 }
